@@ -27,11 +27,20 @@ SECRET_KEY = 'django-insecure-v&n3hpdmu^t0r^62+hj64&c$z8q3o2g9qby^x02jl8y8g@jmb@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '*' ]
+ALLOWED_HOSTS = ['*']
+
+# Proxy Configuration
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
+
 CSRF_TRUSTED_ORIGINS = [
-    'https://mox.mishref.uk'
+    'https://mox.mishref.uk',
 ]
+
+# Cookie Security (since we are on HTTPS)
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 # Application definition
