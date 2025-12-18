@@ -16,7 +16,7 @@ services:
       context: ./
       dockerfile: ./Dockerfile
     image: openmoxie/openmoxie-server:${OPENMOXIE_VERSION:-latest}
-    ports:
+    expose:
       - "8000"
     volumes:
       - ./local/work:/app/site/work
