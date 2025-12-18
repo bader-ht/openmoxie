@@ -17,7 +17,7 @@ services:
       dockerfile: ./Dockerfile
     image: openmoxie/openmoxie-server:${OPENMOXIE_VERSION:-latest}
     ports:
-      - "8001:8000"
+      - "8000"
     volumes:
       - ./local/work:/app/site/work
     depends_on:
