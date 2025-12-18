@@ -28,6 +28,10 @@ SECRET_KEY = 'django-insecure-v&n3hpdmu^t0r^62+hj64&c$z8q3o2g9qby^x02jl8y8g@jmb@
 DEBUG = True
 
 ALLOWED_HOSTS = [ '*' ]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = [
+    'https://mox.mishref.uk'
+]
 
 
 # Application definition
