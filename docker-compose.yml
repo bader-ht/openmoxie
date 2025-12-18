@@ -2,9 +2,9 @@
 services:
 
   mqtt:
-    build:
-      context: ./
-      dockerfile: ./mqtt.Dockerfile
+    # build:
+    #   context: ./
+    #   dockerfile: ./mqtt.Dockerfile
     image: openmoxie/openmoxie-mqtt:${OPENMOXIE_VERSION:-latest}
     ports:
       - "8883:8883"
@@ -12,12 +12,12 @@ services:
       - ./local/work:/mosquitto/log
 
   server:
-    build:
-      context: ./
-      dockerfile: ./Dockerfile
+    # build:
+    #   context: ./
+    #   dockerfile: ./Dockerfile
     image: openmoxie/openmoxie-server:${OPENMOXIE_VERSION:-latest}
-    expose:
-      - "8000"
+    ports:
+      - "8001:8000"
     volumes:
       - ./local/work:/app/site/work
     depends_on:
