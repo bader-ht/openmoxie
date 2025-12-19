@@ -36,8 +36,6 @@ USE_X_FORWARDED_PORT = True
 
 CSRF_TRUSTED_ORIGINS = [
     'https://mox.mishref.uk',
-    'http://mox.mishref.uk',
-    'mox.mishref.uk',
 ]
 
 # Cookie Security (since we are on HTTPS)
