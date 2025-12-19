@@ -2,9 +2,9 @@
 services:
 
   mqtt:
-    # build:
-    #   context: ./
-    #   dockerfile: ./mqtt.Dockerfile
+    build:
+      context: ./
+      dockerfile: ./mqtt.Dockerfile
     # image: openmoxie/openmoxie-mqtt:${OPENMOXIE_VERSION:-latest}
     ports:
       - "8883:8883"
